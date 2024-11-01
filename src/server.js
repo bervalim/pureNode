@@ -2,6 +2,8 @@ import http from "node:http";
 import { json } from "./middlewares/json.js";
 import { routes } from "./routes.js";
 
+// http:localhost/users?userId=1 -- query param
+//// http:localhost/users/1-- Route param
 const server = http.createServer(async (req, res) => {
   const { method, url } = req;
 
