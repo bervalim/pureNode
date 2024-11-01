@@ -6,12 +6,6 @@ const databasePath = new URL("../db.json", import.meta.url);
 export class Database {
   #database = {};
 
-  // Esse método será chamado todas as vezes que
-  // quisermos persistir algum dado
-  //Iremos transformar Esse bnanco de dados em uma estrutura json
-  // write file só aceita strings
-  // Criando um constructor para que ele seja executado toda vez que a classe seja
-  // instanciada
   constructor() {
     fs.readFile(databasePath, "utf-8")
       .then((data) => {
